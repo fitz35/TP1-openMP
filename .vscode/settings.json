@@ -1,0 +1,10 @@
+{
+    "python.linting.pylintArgs": [
+        "--init-hook",
+        "import sys; sys.path.append('${workspaceFolder}/Functions')"
+    ],
+    "files.associations": {
+        "*.tcc": "cpp",
+        "fstream": "cpp"
+    }
+}
