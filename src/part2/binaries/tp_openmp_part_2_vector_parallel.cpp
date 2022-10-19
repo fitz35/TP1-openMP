@@ -46,6 +46,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <sys/time.h>
+#include <fstream>
 
 #include <cmath>
 
@@ -158,6 +159,11 @@ int main( int argc, char* argv[] )
   std::free(A);
   std::free(y);
   std::free(x);
+
+  std::ofstream myfile;
+  myfile.open ("../vector_Stats.csv", std::ios_base::app);
+  myfile << "Parallel,"<< N << "," << M << "," << time << "," << (Gbytes * 1000) << "," << (Gbytes * nrepeat / time) <<std::endl ;
+  myfile.close();
 
   return 0;
 }
