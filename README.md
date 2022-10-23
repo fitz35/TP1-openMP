@@ -2,7 +2,7 @@
 
 First install anaconda (https://gist.github.com/kauffmanes/5e74916617f9993bc3479f401dfec7da), next create environnement :
 '''
-conda create -n myenv -f requirements.txt
+conda create -n myenv
 '''
 
 Activate environnement in vscode : open the command palette (Ctrl+Shift+P) and type "Python: Select Interpreter" and select the environnement.
