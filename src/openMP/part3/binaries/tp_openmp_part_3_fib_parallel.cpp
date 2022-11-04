@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <sys/time.h>
+#include <fstream>
 
 static int N = 5;
 
@@ -121,6 +122,11 @@ int main(int argc, char *argv[]) {
 
      printf("Compute Time: %f seconds\n", time);
 
-     return 0;
+  std::ofstream myfile;
+  myfile.open ("../fib_Stats.csv", std::ios_base::app);
+  myfile << "Parallel,"<< N << "," << time <<std::endl ;
+  myfile.close();
+  return 0;
+
 }
 
